@@ -3,33 +3,42 @@
 
 <head>
     <Title>ASCII_ART</Title>
+    <link rel="stylesheet" href="../static/formatter.css" />
 </head>
 
 <body>
+    <div class="overall">
+        <h1>Generate ASCII ART</h1>
+        <form method="post" action="/ascii-art">
 
-    <h1>Generate ASCII ART</h1>
-    <form method="post" action="/ascii-art">
-        <div>
-            <label>Text Area</label><br />
-            <textarea type="text" name="userInput" placeholder="Enter text here" ></textarea><br />
-            <label>Choose the banner file you want to use</label><br />
-            <input type="radio" id="standard" name="banners" value="standard.txt" > 
-            <label for="standard">standard</label><br />
-            <input type="radio" id="thinkertoy" name="banners" value="thinkertoy.txt">
-            <label for="thinkertoy">thinkertoy</label><br />
-            <input type="radio" id="shadow" name="banners" value="shadow.txt">
-            <label for="shadow">shadow</label>
-        </div>
-        <div>
-            <input type="submit" value="Generate art">
-        </div>
-    </form>
-    <label>Your generated art is</label><br />
-    {{if .Result}}
-    <pre>{{.Result}} </pre>
-    {{end}}
-    <p><a href="/">Reset</a></p>
+            <div class="center">
+                <textarea type="text" name="userInput" placeholder="Enter text here"></textarea>
+            </div>
+                 <div>
+                    <p>Choose the banner file you want to use</p>
+                </div>
 
+                <div class="center">
+                    <input type="radio" class="form.radio" id="standard" name="banners" value="standard.txt">
+                    <label for="standard">standard</label>
+                    <input type="radio" class="form.radio" id="thinkertoy" name="banners" value="thinkertoy.txt">
+                    <label for="thinkertoy">thinkertoy</label>
+                    <input type="radio" class="form.radio" id="shadow" name="banners" value="shadow.txt">
+                    <label for="shadow">shadow</label>
+                </div>
+                <div class="center">
+                    <input type="submit" id="generate" value="Generate art">
+                </div>
+
+
+        </form>
+
+        {{if .Result}}
+        <p>Your generated art is</p>
+        <pre>{{.Result}} </pre>
+        {{end}}
+        <p><a href="/">Reset</a></p>
+    </div>
 </body>
 
 </html>
