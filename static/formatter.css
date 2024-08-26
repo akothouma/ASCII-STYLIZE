@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(211, 159, 95);
+    font-size:large;
+    
+}
+h1,label{
+    color: blanchedalmond;
+    text-align: center;
+}
+
+textarea{
+    text-align: center;
+    margin: auto;
+    border:  3px solid blanchedalmond;
+    padding:10px;
+    background-color: rgb(211, 159, 95);
+    color: rgb(83, 50, 9);
+    font-weight: bolder;
+    font-size: x-large;
+    
+
+
+}
+.overall{
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,50%);
+  
+}
+.center{
+    margin: auto;
+    padding:10px;
+    width:auto;
+    text-align: center;
+}
+pre{
+    padding: 10px;
+   text-align: center;
+   font-weight: bolder;
+
+}
+#generate{
+    border:3px solid blanchedalmond;
+    padding:16px 32px;
+    color:blanchedalmond;
+    background-color:rgb(83, 50, 9);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25%;
+    
+}
+.form-radio:checked+label::after{
+    border:2px solid rgb(83, 50, 9) !important;
+    
+
+}
+
+p{
+    text-align: center;
+    color: blanchedalmond;
+}
+
+a:link{
+    color: blanchedalmond;
+}
+a:active{
+    color:rgb(83, 50, 9)
+}
+#resultPrompt{
+    text-align: center;
+}
