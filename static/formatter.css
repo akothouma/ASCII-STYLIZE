@@ -1,50 +1,62 @@
 body{
-    background-color: rgb(211, 159, 95);
     font-size:large;
+    background-image: url(../static/Screenshot\ 2024-08-26\ at\ 16-37-28\ Premium\ Photo\ White\ alphabet\ frame\ background.png);
+    background-size: cover;
+    background-repeat: repeat-y;
     
 }
 h1,label{
-    color: blanchedalmond;
+    color:rgb(83, 50, 9);
     text-align: center;
 }
 
 textarea{
     text-align: center;
     margin: auto;
-    border:  3px solid blanchedalmond;
+    border:  3px solid rgb(83, 50, 9);
     padding:10px;
-    background-color: rgb(211, 159, 95);
     color: rgb(83, 50, 9);
     font-weight: bolder;
     font-size: x-large;
+
     
 
 
 }
 .overall{
-    position: relative;
-    top:20%;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,50%);
-  
+    transform: translate(-50%,-50%);
 }
+/* .result{
+    position: absolute;
+    overflow: auto;
+    left: 50%;
+ 
+} */
+/* .flex-Container{
+   display: flex-; 
+   flex-direction:column;
+   justify-content: space-between;
+
+} */
 .center{
+    
     margin: auto;
     padding:10px;
     width:auto;
     text-align: center;
 }
-pre{
-    padding: 10px;
-   text-align: center;
+/* pre{
+   overflow: auto;
    font-weight: bolder;
-
-}
+   border: 3px solid rgb(92, 89, 89);
+} */
 #generate{
-    border:3px solid blanchedalmond;
+    border:3px solid rgb(92, 89, 89);
     padding:16px 32px;
-    color:blanchedalmond;
-    background-color:rgb(83, 50, 9);
+    color:rgb(83, 50, 9);
     font-weight: bold;
     cursor: pointer;
     border-radius: 25%;
@@ -52,21 +64,9 @@ pre{
 }
 .form-radio:checked+label::after{
     border:2px solid rgb(83, 50, 9) !important;
-    
-
 }
 
 p{
     text-align: center;
-    color: blanchedalmond;
-}
-
-a:link{
-    color: blanchedalmond;
-}
-a:active{
-    color:rgb(83, 50, 9)
-}
-#resultPrompt{
-    text-align: center;
+    color: rgb(83, 50, 9)
 }
