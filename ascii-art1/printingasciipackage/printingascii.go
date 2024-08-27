@@ -12,7 +12,6 @@ import (
 func PrintingAscii(text, patternFile string) (string, error) {
 	// text = strings.ReplaceAll(text, "\n", "\\n")
 	res := ""
-
 	for i := 0; i < len(text); {
 		if i+1 < len(text) && text[i] == '\\' && text[i+1] == 'a' {
 			return "", fmt.Errorf("Character not supported")
@@ -47,7 +46,7 @@ func PrintingAscii(text, patternFile string) (string, error) {
 		}
 		i++
 	}
-	lines := strings.Split(text, "\n")
+	lines := strings.Split(text, "\r\n")
 	asciiMap, err := mapPackage.AsciiMapping(patternFile)
 	if err != nil {
 		return "", fmt.Errorf("Error mapping %v with error %v", patternFile,err)
