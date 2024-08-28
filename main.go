@@ -15,7 +15,7 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	err := http.ListenAndServe(port, nil)
 	if err != nil {
-		fmt.Print("Server failed to start succesfully")
+		fmt.Print("Server failed to start succesfully\n")
 		return
 	}
 }
