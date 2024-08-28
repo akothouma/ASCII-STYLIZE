@@ -6,12 +6,7 @@
     font-weight: bolder;
     font-size: small;
     color: rgb(83, 50, 9);
-    text-align: center;
-    overflow-y: auto;
-    overflow-x: auto;
-    width:40%;
-    height: 40%;
-    font-weight: bolder;
+    overflow: auto;
 }
 p{
     text-align: center;
