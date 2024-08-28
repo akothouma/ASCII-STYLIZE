@@ -1,34 +1,40 @@
-body{
-    font-size:large;
+body {
+    font-size: large;
     background-image: url(../static/Screenshot\ 2024-08-26\ at\ 16-37-28\ Premium\ Photo\ White\ alphabet\ frame\ background.png);
-    background-size: cover;
-    background-repeat: repeat-y;
-    
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
 }
-h1,label{
-    color:rgb(83, 50, 9);
+
+h1,
+label {
+    color: rgb(83, 50, 9);
     text-align: center;
 }
 
-textarea{
+textarea {
     text-align: center;
     margin: auto;
-    border:  3px solid rgb(83, 50, 9);
-    padding:10px;
+    border: 3px solid rgb(83, 50, 9);
+    padding: 10px;
     color: rgb(83, 50, 9);
     font-weight: bolder;
     font-size: x-large;
 
-    
+
 
 
 }
-.overall{
+
+.overall {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 /* .result{
     position: absolute;
     overflow: auto;
@@ -41,32 +47,34 @@ textarea{
    justify-content: space-between;
 
 } */
-.center{
-    
+.center {
+
     margin: auto;
-    padding:10px;
-    width:auto;
+    padding: 10px;
+    width: auto;
     text-align: center;
 }
+
 /* pre{
    overflow: auto;
    font-weight: bolder;
    border: 3px solid rgb(92, 89, 89);
 } */
-#generate{
-    border:3px solid rgb(92, 89, 89);
-    padding:16px 32px;
-    color:rgb(83, 50, 9);
+#generate {
+    border: 3px solid rgb(92, 89, 89);
+    padding: 16px 32px;
+    color: rgb(83, 50, 9);
     font-weight: bold;
     cursor: pointer;
     border-radius: 25%;
-    
-}
-.form-radio:checked+label::after{
-    border:2px solid rgb(83, 50, 9) !important;
+
 }
 
-p{
+.form-radio:checked+label::after {
+    border: 2px solid rgb(83, 50, 9) !important;
+}
+
+p {
     text-align: center;
     color: rgb(83, 50, 9)
 }
