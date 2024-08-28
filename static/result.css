@@ -5,6 +5,7 @@
     font-weight: bolder;
     font-size: small;
     color: rgb(83, 50, 9);
+    overflow: auto;
 }
 p{
     text-align: center;
