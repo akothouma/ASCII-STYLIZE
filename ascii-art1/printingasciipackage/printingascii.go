@@ -10,6 +10,7 @@ import (
 // Reads input text,gets the pattern convert it to ascii art
 
 func PrintingAscii(text, patternFile string) (string, error) {
+
 	// text = strings.ReplaceAll(text, "\n", "\\n")
 	res := ""
 	for i := 0; i < len(text); {
@@ -27,19 +28,6 @@ func PrintingAscii(text, patternFile string) (string, error) {
 				i = 0
 			}
 			continue
-		}
-		if i+1 < len(text) && text[i] == '\\' && text[i+1] == 't' {
-			text = text[:i] + "   " + text[i+2:]
-		}
-		if i+1 < len(text) && text[i] == '\\' && text[i+1] == 'v' {
-
-			return "", fmt.Errorf("Character not supported")
-		}
-		if i+1 < len(text) && text[i] == '\\' && text[i+1] == 'f' {
-			return "", fmt.Errorf("Character not supported")
-		}
-		if i+1 < len(text) && text[i] == '\\' && text[i+1] == 'r' {
-			return "", fmt.Errorf("Character not supported")
 		}
 		if i+1 < len(text) && text[i] > 127 {
 			return "", fmt.Errorf("Character not supported")
