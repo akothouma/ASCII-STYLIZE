@@ -17,17 +17,15 @@ type ArtDetails struct {
 func GenerateArt(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("templates/result.html")
 	if err != nil {
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		RenderErr(w, http.StatusInternalServerError, "Failed to load result template")
 		return
 	}
 	if r.Method != http.MethodPost {
-		w.WriteHeader(405)
-		http.ServeFile(w, r, "templates/405.html")
+		RenderErr(w, http.StatusInternalServerError, "Method Not Allowed")
 		return
 	}
 	if r.URL.Path != "/ascii-art" {
-		w.WriteHeader(404)
-		http.ServeFile(w, r, "templates/404.html")
+		RenderErr(w, http.StatusNotFound, "Page Not Found")
 		return
 	}
 	if err := r.ParseForm(); err != nil {
@@ -38,23 +36,19 @@ func GenerateArt(w http.ResponseWriter, r *http.Request) {
 	text := r.FormValue("userInput")
 	banner := r.FormValue("banners")
 
-	if text == "" || banner =="" {
-		w.WriteHeader(400)
-		http.ServeFile(w, r, "templates/400.html")
+	if text == "" || banner == "" {
+		RenderErr(w, http.StatusBadRequest, "Banner selection is missing")
 		return
 	}
-	
 
 	result1, err := printingasciipackage.PrintingAscii(text, banner)
 	fmt.Println(err)
 	if err != nil {
 		if err.Error() == "Character not supported" {
-			w.WriteHeader(400)
-			http.ServeFile(w, r, "templates/400.html")
+			RenderErr(w, http.StatusBadRequest, "Character not supported")
 			return
 		}
-		w.WriteHeader(404)
-		http.ServeFile(w, r, "templates/404.html")
+		RenderErr(w, http.StatusNotFound, "Resource not found")
 		return
 	}
 
@@ -66,7 +60,7 @@ func GenerateArt(w http.ResponseWriter, r *http.Request) {
 
 	err = tmpl.Execute(w, neededData)
 	if err != nil {
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		RenderErr(w, http.StatusInternalServerError, "Failed to render result page")
 		return
 	}
 }
