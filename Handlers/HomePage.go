@@ -12,13 +12,13 @@ func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if r.URL.Path != "/" {
-		w.WriteHeader(404)
-		http.ServeFile(w, r, "templates/404.html")
+		RenderErr(w, http.StatusNotFound, "Page Not Found")
+
 		return
 	}
 	if r.Method != http.MethodGet {
-		w.WriteHeader(405)
-		http.ServeFile(w, r, "templates/405.html")
+		RenderErr(w, http.StatusMethodNotAllowed, "Method Not Allowed")
+
 		return
 	}
 	tmpl.Execute(w, nil)

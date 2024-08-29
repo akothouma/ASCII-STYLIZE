@@ -4,6 +4,7 @@
 <head>
     <Title>ASCII_ART</Title>
     <link rel="stylesheet" href="../static/formatter.css" />
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
 </head>
 
 <body
@@ -14,19 +15,19 @@
             <form method="post" action="/ascii-art">
 
                 <div class="center">
-                    <textarea type="text" name="userInput" placeholder="Enter text here"></textarea>
+                    <textarea type="text" name="userInput" placeholder="Enter text here" required></textarea>
                 </div>
                 <div>
                     <p>Choose the banner file you want to use</p>
                 </div>
 
                 <div class="center">
-                    <input type="radio" class="form.radio" id="standard" name="banners" value="standard.txt">
-                    <label for="standard">standard</label>
+                    <input type="radio" class="form.radio" id="standard" name="banners" value="standard.txt" >
+                    <label for="standard" >standard</label>
                     <input type="radio" class="form.radio" id="thinkertoy" name="banners" value="thinkertoy.txt">
                     <label for="thinkertoy">thinkertoy</label>
                     <input type="radio" class="form.radio" id="shadow" name="banners" value="shadow.txt">
-                    <label for="shadow">shadow</label>
+                    <label for="shadow" >shadow</label>
                 </div>
                 <div class="center">
                     <input type="submit" id="generate" value="Generate art">

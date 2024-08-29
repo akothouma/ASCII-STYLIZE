@@ -35,18 +35,6 @@ textarea {
     transform: translate(-50%, -50%);
 }
 
-/* .result{
-    position: absolute;
-    overflow: auto;
-    left: 50%;
- 
-} */
-/* .flex-Container{
-   display: flex-; 
-   flex-direction:column;
-   justify-content: space-between;
-
-} */
 .center {
 font-size: larger;
     margin: auto;
@@ -55,11 +43,6 @@ font-size: larger;
     text-align: center;
 }
 
-/* pre{
-   overflow: auto;
-   font-weight: bolder;
-   border: 3px solid rgb(92, 89, 89);
-} */
 #generate {
     border: 3px solid rgb(92, 89, 89);
     padding: 16px 32px;
@@ -77,4 +60,24 @@ font-size: larger;
 p {
     text-align: center;
     color: rgb(83, 50, 9)
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(83, 50, 9); 
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid rgb(83, 50, 9); 
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+a:hover,
+a.focus {
+    color: #ffffff;
+    background-color: rgb(92, 89, 89); 
+    border-color: rgb(83, 50, 9)
+}
+a:active {
+    background-color: rgb(92, 89, 89); 
+    border-color: rgb(83, 50, 9)
 }
