@@ -35,18 +35,6 @@ textarea {
     transform: translate(-50%, -50%);
 }
 
-/* .result{
-    position: absolute;
-    overflow: auto;
-    left: 50%;
- 
-} */
-/* .flex-Container{
-   display: flex-; 
-   flex-direction:column;
-   justify-content: space-between;
-
-} */
 .center {
 
     margin: auto;
@@ -55,11 +43,6 @@ textarea {
     text-align: center;
 }
 
-/* pre{
-   overflow: auto;
-   font-weight: bolder;
-   border: 3px solid rgb(92, 89, 89);
-} */
 #generate {
     border: 3px solid rgb(92, 89, 89);
     padding: 16px 32px;
