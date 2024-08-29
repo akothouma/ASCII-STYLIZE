@@ -21,7 +21,7 @@ func GenerateArt(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if r.Method != http.MethodPost {
-		RenderErr(w, http.StatusInternalServerError, "Method Not Allowed")
+		RenderErr(w, http.StatusMethodNotAllowed, "Method Not Allowed")
 		return
 	}
 	if r.URL.Path != "/ascii-art" {
