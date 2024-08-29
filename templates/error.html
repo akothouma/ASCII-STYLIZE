@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+
+    <title>Error {{.StatusCode}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 50px; }
+        .error-container { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: inline-block; }
+        h1 { color: #d9534f; }
+        p { font-size: 18px; }
+       
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Error {{.StatusCode}}</h1>
+        <p>{{.Message}}</p>
+        <p><a href="/">Back</a></p>
+
+    </div>
+</body>
+</html>
