@@ -37,7 +37,7 @@ func PrintingAscii(text, patternFile string) (string, error) {
 	lines := strings.Split(text, "\r\n")
 	asciiMap, err := mapPackage.AsciiMapping(patternFile)
 	if err != nil {
-		return "", fmt.Errorf("Error mapping %v with error %v", patternFile,err)
+		return "", fmt.Errorf("Error mapping %v with error %v", patternFile, err)
 	}
 
 	count := 0

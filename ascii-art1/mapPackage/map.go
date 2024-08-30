@@ -33,7 +33,7 @@ func AsciiMapping(patternFile string) (map[rune][]string, error) {
 	} else {
 		testfile, err := os.ReadFile(patternFile)
 		testFileHash := fmt.Sprintf("%x", sha256.Sum256(testfile))
-	
+
 		if testFileHash != standardHash && testFileHash != shadowHash {
 			return nil, fmt.Errorf("%v has been modified", patternFile)
 		}
