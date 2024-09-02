@@ -48,7 +48,7 @@ func GenerateArt(w http.ResponseWriter, r *http.Request) {
 			RenderErr(w, http.StatusBadRequest, "Character not supported")
 			return
 		}
-		RenderErr(w, http.StatusNotFound, "Resource not found")
+		RenderErr(w, http.StatusInternalServerError, "Oops! something happened contact admin")
 		return
 	}
 
