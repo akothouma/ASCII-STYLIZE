@@ -14,17 +14,16 @@
 
 <body>
 
-    {{if .Result}}
-    <p>Your generated art is</p>
-    <div class="center" style="border: 3px solid rgb(83, 50, 9);position: relative;">
-
-        <pre>{{.Result}} </pre>
-
+    <div class="container">
+        {{if .Result}}
+        <h2>Your generated art is</h2>
+        <div class="art-container">
+            <pre>{{.Result}}</pre>
+        </div>
         {{end}}
 
-
+        <p><a href="/">Back</a></p>
     </div>
-    <p><a href="/">Back</a></p>
 </body>
 
 </html>
