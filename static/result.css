@@ -1,34 +1,79 @@
-.center {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-top: 20px;
-    transform: translate(-50%, 0%);
-    font-weight: bolder;
-    font-size: small;
-    color: rgb(83, 50, 9);
-    text-align: center;
-    overflow-y: auto !important;
-    overflow-x: auto;
-    width: 40%;
-    height: 40%;
-    font-weight: bolder;
-    padding-top: 20px;
 
-}
-
-p {
-    text-align: center;
-    color: rgb(83, 50, 9);
-    font-weight: bold;
-    font-size: large;
-    background-color: whitesmoke;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Set a default font */
 }
 
 body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    text-align: center;  /* Center text */
     background-image: url(../static/Screenshot\ 2024-08-26\ at\ 16-37-28\ Premium\ Photo\ White\ alphabet\ frame\ background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: fixed; 
+    color: #333; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+    text-align: center; 
+    background-size: cover; 
+    color: #333;
+}
+
+.art-container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0; 
+    max-width: 80%;
+    overflow: auto; 
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(83, 50, 9);
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 3px solid rgb(83, 50, 9);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+}
+
+/* Hover effect for links */
+a:hover,a:focus {
+    color: #0056b3; 
+    color: #ffffff;
+    background-color: rgb(92, 89, 89);
+    border-color: rgb(83, 50, 9);
+    text-decoration: underline;
+}
+a.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(83, 50, 9);
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 3px solid rgb(83, 50, 9);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+a.back-link:hover,
+a.back-link:focus {
+    color: #ffffff;
+    background-color: rgb(92, 89, 89);
+    border-color: rgb(83, 50, 9)
 }
